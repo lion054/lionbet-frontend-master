@@ -1,0 +1,668 @@
+{
+  "address": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousOwner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "OwnershipTransferred",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "_eventId",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "_name",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "_participants",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint8",
+          "name": "_participantCount",
+          "type": "uint8"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "_date",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "enum OracleInterface.SportKind",
+          "name": "_kind",
+          "type": "uint8"
+        },
+        {
+          "indexed": false,
+          "internalType": "enum OracleInterface.EventOutcome",
+          "name": "_eventOutcome",
+          "type": "uint8"
+        },
+        {
+          "indexed": false,
+          "internalType": "int8",
+          "name": "_winner",
+          "type": "int8"
+        }
+      ],
+      "name": "SportEventAdded",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_name",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_participants",
+          "type": "string"
+        },
+        {
+          "internalType": "uint8",
+          "name": "_participantCount",
+          "type": "uint8"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_date",
+          "type": "uint256"
+        },
+        {
+          "internalType": "enum OracleInterface.SportKind",
+          "name": "_kind",
+          "type": "uint8"
+        }
+      ],
+      "name": "addSportEvent",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "_eventId",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "enum OracleInterface.EventOutcome",
+          "name": "_outcome",
+          "type": "uint8"
+        },
+        {
+          "internalType": "int8",
+          "name": "_winner",
+          "type": "int8"
+        }
+      ],
+      "name": "declareOutcome",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "_eventId",
+          "type": "bytes32"
+        }
+      ],
+      "name": "eventExists",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getAddress",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getAllSportEvents",
+      "outputs": [
+        {
+          "internalType": "bytes32[]",
+          "name": "",
+          "type": "bytes32[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "_eventId",
+          "type": "bytes32"
+        }
+      ],
+      "name": "getEvent",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "id",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "participants",
+          "type": "string"
+        },
+        {
+          "internalType": "uint8",
+          "name": "participantCount",
+          "type": "uint8"
+        },
+        {
+          "internalType": "uint256",
+          "name": "date",
+          "type": "uint256"
+        },
+        {
+          "internalType": "enum OracleInterface.SportKind",
+          "name": "kind",
+          "type": "uint8"
+        },
+        {
+          "internalType": "enum OracleInterface.EventOutcome",
+          "name": "outcome",
+          "type": "uint8"
+        },
+        {
+          "internalType": "int8",
+          "name": "winner",
+          "type": "int8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bool",
+          "name": "_pending",
+          "type": "bool"
+        }
+      ],
+      "name": "getLatestEvent",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "id",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "participants",
+          "type": "string"
+        },
+        {
+          "internalType": "uint8",
+          "name": "participantCount",
+          "type": "uint8"
+        },
+        {
+          "internalType": "uint256",
+          "name": "date",
+          "type": "uint256"
+        },
+        {
+          "internalType": "enum OracleInterface.SportKind",
+          "name": "kind",
+          "type": "uint8"
+        },
+        {
+          "internalType": "enum OracleInterface.EventOutcome",
+          "name": "outcome",
+          "type": "uint8"
+        },
+        {
+          "internalType": "int8",
+          "name": "winner",
+          "type": "int8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getPendingEvents",
+      "outputs": [
+        {
+          "internalType": "bytes32[]",
+          "name": "",
+          "type": "bytes32[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "renounceOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "testConnection",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x533ec11c26e80aabcb66dc42e7cea6b0ecba5c5f775cfb34d5a40e2f404dae98",
+  "receipt": {
+    "to": null,
+    "from": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+    "contractAddress": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+    "transactionIndex": 0,
+    "gasUsed": "1991377",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000800000000000000000000000000000000000000000000000000000000040200000000000000000000000000000000000000000000000000001000000000000000000000000000000000000020000000000000100000800000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000200000000000000000000000002000000000000000000020000000000000000000000000000000000000000000000000400000000000000000",
+    "blockHash": "0xf9f20af03b8c04d10864779a647992167d232a46be9ecddd4ced6848f07abbea",
+    "transactionHash": "0x533ec11c26e80aabcb66dc42e7cea6b0ecba5c5f775cfb34d5a40e2f404dae98",
+    "logs": [
+      {
+        "transactionIndex": 0,
+        "blockNumber": 3,
+        "transactionHash": "0x533ec11c26e80aabcb66dc42e7cea6b0ecba5c5f775cfb34d5a40e2f404dae98",
+        "address": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+        "topics": [
+          "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0",
+          "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "0x000000000000000000000000f39fd6e51aad88f6f4ce6ab8827279cfffb92266"
+        ],
+        "data": "0x",
+        "logIndex": 0,
+        "blockHash": "0xf9f20af03b8c04d10864779a647992167d232a46be9ecddd4ced6848f07abbea"
+      }
+    ],
+    "blockNumber": 3,
+    "cumulativeGasUsed": "1991377",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "solcInputHash": "cc781f420f01e99c34b4728e710065fa",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.4+commit.c7e474f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"_eventId\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"_name\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"_participants\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"_participantCount\",\"type\":\"uint8\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"_date\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"enum OracleInterface.SportKind\",\"name\":\"_kind\",\"type\":\"uint8\"},{\"indexed\":false,\"internalType\":\"enum OracleInterface.EventOutcome\",\"name\":\"_eventOutcome\",\"type\":\"uint8\"},{\"indexed\":false,\"internalType\":\"int8\",\"name\":\"_winner\",\"type\":\"int8\"}],\"name\":\"SportEventAdded\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"_name\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_participants\",\"type\":\"string\"},{\"internalType\":\"uint8\",\"name\":\"_participantCount\",\"type\":\"uint8\"},{\"internalType\":\"uint256\",\"name\":\"_date\",\"type\":\"uint256\"},{\"internalType\":\"enum OracleInterface.SportKind\",\"name\":\"_kind\",\"type\":\"uint8\"}],\"name\":\"addSportEvent\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_eventId\",\"type\":\"bytes32\"},{\"internalType\":\"enum OracleInterface.EventOutcome\",\"name\":\"_outcome\",\"type\":\"uint8\"},{\"internalType\":\"int8\",\"name\":\"_winner\",\"type\":\"int8\"}],\"name\":\"declareOutcome\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_eventId\",\"type\":\"bytes32\"}],\"name\":\"eventExists\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getAllSportEvents\",\"outputs\":[{\"internalType\":\"bytes32[]\",\"name\":\"\",\"type\":\"bytes32[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"_eventId\",\"type\":\"bytes32\"}],\"name\":\"getEvent\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"id\",\"type\":\"bytes32\"},{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"participants\",\"type\":\"string\"},{\"internalType\":\"uint8\",\"name\":\"participantCount\",\"type\":\"uint8\"},{\"internalType\":\"uint256\",\"name\":\"date\",\"type\":\"uint256\"},{\"internalType\":\"enum OracleInterface.SportKind\",\"name\":\"kind\",\"type\":\"uint8\"},{\"internalType\":\"enum OracleInterface.EventOutcome\",\"name\":\"outcome\",\"type\":\"uint8\"},{\"internalType\":\"int8\",\"name\":\"winner\",\"type\":\"int8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bool\",\"name\":\"_pending\",\"type\":\"bool\"}],\"name\":\"getLatestEvent\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"id\",\"type\":\"bytes32\"},{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"participants\",\"type\":\"string\"},{\"internalType\":\"uint8\",\"name\":\"participantCount\",\"type\":\"uint8\"},{\"internalType\":\"uint256\",\"name\":\"date\",\"type\":\"uint256\"},{\"internalType\":\"enum OracleInterface.SportKind\",\"name\":\"kind\",\"type\":\"uint8\"},{\"internalType\":\"enum OracleInterface.EventOutcome\",\"name\":\"outcome\",\"type\":\"uint8\"},{\"internalType\":\"int8\",\"name\":\"winner\",\"type\":\"int8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getPendingEvents\",\"outputs\":[{\"internalType\":\"bytes32[]\",\"name\":\"\",\"type\":\"bytes32[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"testConnection\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"events\":{\"SportEventAdded(bytes32,string,string,uint8,uint256,uint8,uint8,int8)\":{\"details\":\"Triggered once an event has been added\"}},\"kind\":\"dev\",\"methods\":{\"addSportEvent(string,string,uint8,uint256,uint8)\":{\"params\":{\"_date\":\"date set for the sport event\",\"_kind\":\"kind of the sport (e.g. soccer/rugby/basketball)\",\"_name\":\"descriptive name for the sport event (e.g. Pac vs. Mayweather 2016)\",\"_participantCount\":\"number of participants\",\"_participants\":\"|-delimited string of participants names (e.g. \\\"Montpellier|Monaco\\\")\"},\"returns\":{\"_0\":\"the unique id of the newly created sport event\"}},\"declareOutcome(bytes32,uint8,int8)\":{\"params\":{\"_eventId\":\"unique id of the match to modify\",\"_outcome\":\"outcome of the match\",\"_winner\":\"0-based id of the winnner\"}},\"eventExists(bytes32)\":{\"params\":{\"_eventId\":\"the id of a sport event id\"},\"returns\":{\"_0\":\"true if sport event exists and its id is valid\"}},\"getAddress()\":{\"returns\":{\"_0\":\"the address of the BetOracle smart-contract\"}},\"getAllSportEvents()\":{\"returns\":{\"_0\":\"an array of unique match ids\"}},\"getEvent(bytes32)\":{\"params\":{\"_eventId\":\"the unique id of the desired event\"},\"returns\":{\"date\":\"when the event takes place\",\"id\":\"  the id of the event\",\"kind\":\"what is sport kind\",\"name\":\"the name of the event\",\"outcome\":\"an integer that represents the event outcome\",\"participantCount\":\"the number of the event's participants\",\"participants\":\"a string with the name of the event's participants separated with a pipe symbol ('|')\",\"winner\":\"the index of the winner\"}},\"getPendingEvents()\":{\"returns\":{\"_0\":\"an array of unique pending events ids\"}},\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"testConnection()\":{\"returns\":{\"_0\":\"true, unconditionally\"}},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}},\"stateVariables\":{\"events\":{\"details\":\"all the sport events\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"addSportEvent(string,string,uint8,uint256,uint8)\":{\"notice\":\"Add a new pending sport event into the blockchain\"},\"declareOutcome(bytes32,uint8,int8)\":{\"notice\":\"Sets the outcome of a predefined match, permanently on the blockchain\"},\"eventExists(bytes32)\":{\"notice\":\"Determines whether a sport event exists with the given id\"},\"getAddress()\":{\"notice\":\"gets the address of this contract\"},\"getAllSportEvents()\":{\"notice\":\"gets the unique ids of events, pending and decided, in reverse chronological order\"},\"getEvent(bytes32)\":{\"notice\":\"gets the specified sport event and return its data\"},\"getPendingEvents()\":{\"notice\":\"gets the unique ids of all pending events, in reverse chronological order\"},\"testConnection()\":{\"notice\":\"can be used by a client contract to ensure that they've connected to this contract interface successfully\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/BetOracle.sol\":\"BetOracle\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/access/Ownable.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.0;\\n\\nimport \\\"../utils/Context.sol\\\";\\n\\n/**\\n * @dev Contract module which provides a basic access control mechanism, where\\n * there is an account (an owner) that can be granted exclusive access to\\n * specific functions.\\n *\\n * By default, the owner account will be the one that deploys the contract. This\\n * can later be changed with {transferOwnership}.\\n *\\n * This module is used through inheritance. It will make available the modifier\\n * `onlyOwner`, which can be applied to your functions to restrict their use to\\n * the owner.\\n */\\nabstract contract Ownable is Context {\\n    address private _owner;\\n\\n    event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);\\n\\n    /**\\n     * @dev Initializes the contract setting the deployer as the initial owner.\\n     */\\n    constructor() {\\n        _setOwner(_msgSender());\\n    }\\n\\n    /**\\n     * @dev Returns the address of the current owner.\\n     */\\n    function owner() public view virtual returns (address) {\\n        return _owner;\\n    }\\n\\n    /**\\n     * @dev Throws if called by any account other than the owner.\\n     */\\n    modifier onlyOwner() {\\n        require(owner() == _msgSender(), \\\"Ownable: caller is not the owner\\\");\\n        _;\\n    }\\n\\n    /**\\n     * @dev Leaves the contract without owner. It will not be possible to call\\n     * `onlyOwner` functions anymore. Can only be called by the current owner.\\n     *\\n     * NOTE: Renouncing ownership will leave the contract without an owner,\\n     * thereby removing any functionality that is only available to the owner.\\n     */\\n    function renounceOwnership() public virtual onlyOwner {\\n        _setOwner(address(0));\\n    }\\n\\n    /**\\n     * @dev Transfers ownership of the contract to a new account (`newOwner`).\\n     * Can only be called by the current owner.\\n     */\\n    function transferOwnership(address newOwner) public virtual onlyOwner {\\n        require(newOwner != address(0), \\\"Ownable: new owner is the zero address\\\");\\n        _setOwner(newOwner);\\n    }\\n\\n    function _setOwner(address newOwner) private {\\n        address oldOwner = _owner;\\n        _owner = newOwner;\\n        emit OwnershipTransferred(oldOwner, newOwner);\\n    }\\n}\\n\",\"keccak256\":\"0x6bb804a310218875e89d12c053e94a13a4607cdf7cc2052f3e52bd32a0dc50a1\",\"license\":\"MIT\"},\"@openzeppelin/contracts/security/ReentrancyGuard.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.0;\\n\\n/**\\n * @dev Contract module that helps prevent reentrant calls to a function.\\n *\\n * Inheriting from `ReentrancyGuard` will make the {nonReentrant} modifier\\n * available, which can be applied to functions to make sure there are no nested\\n * (reentrant) calls to them.\\n *\\n * Note that because there is a single `nonReentrant` guard, functions marked as\\n * `nonReentrant` may not call one another. This can be worked around by making\\n * those functions `private`, and then adding `external` `nonReentrant` entry\\n * points to them.\\n *\\n * TIP: If you would like to learn more about reentrancy and alternative ways\\n * to protect against it, check out our blog post\\n * https://blog.openzeppelin.com/reentrancy-after-istanbul/[Reentrancy After Istanbul].\\n */\\nabstract contract ReentrancyGuard {\\n    // Booleans are more expensive than uint256 or any type that takes up a full\\n    // word because each write operation emits an extra SLOAD to first read the\\n    // slot's contents, replace the bits taken up by the boolean, and then write\\n    // back. This is the compiler's defense against contract upgrades and\\n    // pointer aliasing, and it cannot be disabled.\\n\\n    // The values being non-zero value makes deployment a bit more expensive,\\n    // but in exchange the refund on every call to nonReentrant will be lower in\\n    // amount. Since refunds are capped to a percentage of the total\\n    // transaction's gas, it is best to keep them low in cases like this one, to\\n    // increase the likelihood of the full refund coming into effect.\\n    uint256 private constant _NOT_ENTERED = 1;\\n    uint256 private constant _ENTERED = 2;\\n\\n    uint256 private _status;\\n\\n    constructor() {\\n        _status = _NOT_ENTERED;\\n    }\\n\\n    /**\\n     * @dev Prevents a contract from calling itself, directly or indirectly.\\n     * Calling a `nonReentrant` function from another `nonReentrant`\\n     * function is not supported. It is possible to prevent this from happening\\n     * by making the `nonReentrant` function external, and make it call a\\n     * `private` function that does the actual work.\\n     */\\n    modifier nonReentrant() {\\n        // On the first call to nonReentrant, _notEntered will be true\\n        require(_status != _ENTERED, \\\"ReentrancyGuard: reentrant call\\\");\\n\\n        // Any calls to nonReentrant after this point will fail\\n        _status = _ENTERED;\\n\\n        _;\\n\\n        // By storing the original value once again, a refund is triggered (see\\n        // https://eips.ethereum.org/EIPS/eip-2200)\\n        _status = _NOT_ENTERED;\\n    }\\n}\\n\",\"keccak256\":\"0x842ccf9a6cd33e17b7acef8372ca42090755217b358fe0c44c98e951ea549d3a\",\"license\":\"MIT\"},\"@openzeppelin/contracts/utils/Context.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.0;\\n\\n/**\\n * @dev Provides information about the current execution context, including the\\n * sender of the transaction and its data. While these are generally available\\n * via msg.sender and msg.data, they should not be accessed in such a direct\\n * manner, since when dealing with meta-transactions the account sending and\\n * paying for execution may not be the actual sender (as far as an application\\n * is concerned).\\n *\\n * This contract is only required for intermediate, library-like contracts.\\n */\\nabstract contract Context {\\n    function _msgSender() internal view virtual returns (address) {\\n        return msg.sender;\\n    }\\n\\n    function _msgData() internal view virtual returns (bytes calldata) {\\n        return msg.data;\\n    }\\n}\\n\",\"keccak256\":\"0x90565a39ae45c80f0468dc96c7b20d0afc3055f344c8203a0c9258239f350b9f\",\"license\":\"MIT\"},\"contracts/BetOracle.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\r\\npragma solidity ^0.8.4;\\r\\n\\r\\nimport \\\"@openzeppelin/contracts/access/Ownable.sol\\\";\\r\\nimport \\\"@openzeppelin/contracts/security/ReentrancyGuard.sol\\\";\\r\\n\\r\\nimport \\\"./OracleInterface.sol\\\";\\r\\n\\r\\n\\r\\n\\r\\ncontract BetOracle is OracleInterface, Ownable, ReentrancyGuard {\\r\\n\\r\\n    /**\\r\\n     * @dev all the sport events\\r\\n     */\\r\\n    SportEvent[] events;\\r\\n\\r\\n    /*\\r\\n     * @dev map of composed {eventId (SHA3 of event key infos) => eventIndex (in events)} pairs\\r\\n     */\\r\\n    mapping(bytes32 => uint) eventIdToIndex;\\r\\n\\r\\n    /***\\r\\n      * @dev defines a sport event along with its outcome\\r\\n      */\\r\\n    struct SportEvent {\\r\\n        bytes32      id;\\r\\n        string       name;\\r\\n        string       participants;\\r\\n        uint8        participantCount;\\r\\n        uint         date;\\r\\n        SportKind    kind;\\r\\n        EventOutcome outcome;\\r\\n        int8         winner;\\r\\n    }\\r\\n\\r\\n    // enum EventOutcome is defind in OracleInterface\\r\\n\\r\\n    /**\\r\\n     * @dev Triggered once an event has been added\\r\\n     */\\r\\n    event SportEventAdded(\\r\\n        bytes32      _eventId,\\r\\n        string       _name,\\r\\n        string       _participants,\\r\\n        uint8        _participantCount,\\r\\n        uint         _date,\\r\\n        SportKind    _kind,\\r\\n        EventOutcome _eventOutcome,\\r\\n        int8         _winner\\r\\n    );\\r\\n\\r\\n    /**\\r\\n     * @notice Add a new pending sport event into the blockchain\\r\\n     * @param _name descriptive name for the sport event (e.g. Pac vs. Mayweather 2016)\\r\\n     * @param _participants |-delimited string of participants names (e.g. \\\"Montpellier|Monaco\\\")\\r\\n     * @param _participantCount number of participants\\r\\n     * @param _date date set for the sport event\\r\\n     * @param _kind kind of the sport (e.g. soccer/rugby/basketball)\\r\\n     * @return the unique id of the newly created sport event\\r\\n     */\\r\\n    function addSportEvent(\\r\\n        string memory _name,\\r\\n        string memory _participants,\\r\\n        uint8         _participantCount,\\r\\n        uint          _date,\\r\\n        SportKind     _kind\\r\\n    )\\r\\n        public onlyOwner nonReentrant\\r\\n        returns (bytes32)\\r\\n    {\\r\\n        bytes memory bytesName = bytes(_name);\\r\\n        require(bytesName.length > 0, \\\"_name cannot be empty\\\");\\r\\n        require(\\r\\n            _date >= block.timestamp + 1 weeks,\\r\\n            \\\"_date must be >= 1 week from now\\\"\\r\\n        );\\r\\n\\r\\n        // Hash key fields of the sport event to get a unique id\\r\\n        bytes32 eventId = keccak256(abi.encodePacked(_name, _participantCount, _date, _kind));\\r\\n\\r\\n        // Make sure that the sport event is unique and does not exist yet\\r\\n        require(!eventExists(eventId), \\\"Event already exists\\\");\\r\\n\\r\\n        // Add the sport event\\r\\n        events.push(\\r\\n            SportEvent(eventId, _name, _participants, _participantCount, _date, _kind, EventOutcome.Pending, -1)\\r\\n        );\\r\\n        uint newIndex           = events.length - 1;\\r\\n        eventIdToIndex[eventId] = newIndex + 1;\\r\\n\\r\\n        emit SportEventAdded(\\r\\n            eventId,\\r\\n            _name,\\r\\n            _participants,\\r\\n            _participantCount,\\r\\n            _date,\\r\\n            _kind,\\r\\n            EventOutcome.Pending,\\r\\n            -1                      // no winner yet\\r\\n        );\\r\\n\\r\\n        // Return the unique id of the new sport event\\r\\n        return eventId;\\r\\n    }\\r\\n\\r\\n    /**\\r\\n     * @notice Returns the array index of the sport event with the given id\\r\\n     * @dev if the event id is invalid, then the return value will be incorrect and may cause error; you must call eventExists(_eventId) first!\\r\\n     * @param _eventId the sport event id to get\\r\\n     * @return the array index of this event if it exists or else -1\\r\\n     */\\r\\n    function _getMatchIndex(bytes32 _eventId)\\r\\n        private view\\r\\n        returns (uint)\\r\\n    {\\r\\n        return eventIdToIndex[_eventId] - 1;\\r\\n    }\\r\\n\\r\\n    /**\\r\\n     * @notice Determines whether a sport event exists with the given id\\r\\n     * @param _eventId the id of a sport event id\\r\\n     * @return true if sport event exists and its id is valid\\r\\n     */\\r\\n    function eventExists(bytes32 _eventId)\\r\\n        public view override\\r\\n        returns (bool)\\r\\n    {\\r\\n        if (events.length == 0) {\\r\\n            return false;\\r\\n        }\\r\\n        uint index = eventIdToIndex[_eventId];\\r\\n        return (index > 0);\\r\\n    }\\r\\n\\r\\n    /**\\r\\n     * @notice Sets the outcome of a predefined match, permanently on the blockchain\\r\\n     * @param _eventId unique id of the match to modify\\r\\n     * @param _outcome outcome of the match\\r\\n     * @param _winner 0-based id of the winnner\\r\\n     */\\r\\n    function declareOutcome(bytes32 _eventId, EventOutcome _outcome, int8 _winner)\\r\\n        onlyOwner external\\r\\n    {\\r\\n        // Require that it exists\\r\\n        require(eventExists(_eventId));\\r\\n\\r\\n        // Get the event\\r\\n        uint index = _getMatchIndex(_eventId);\\r\\n        SportEvent storage theMatch = events[index];\\r\\n\\r\\n        if (_outcome == EventOutcome.Decided)\\r\\n            require(_winner >= 0 && theMatch.participantCount > uint8(_winner));\\r\\n\\r\\n        // Set the outcome\\r\\n        theMatch.outcome = _outcome;\\r\\n\\r\\n        // Set the winner (if there is one)\\r\\n        if (_outcome == EventOutcome.Decided)\\r\\n            theMatch.winner = _winner;\\r\\n    }\\r\\n\\r\\n    /**\\r\\n     * @notice gets the unique ids of all pending events, in reverse chronological order\\r\\n     * @return an array of unique pending events ids\\r\\n     */\\r\\n    function getPendingEvents()\\r\\n        public view override\\r\\n        returns (bytes32[] memory)\\r\\n    {\\r\\n        uint count = 0;\\r\\n\\r\\n        // Get the count of pending events\\r\\n        for (uint i = 0; i < events.length; i = i + 1) {\\r\\n            if (events[i].outcome == EventOutcome.Pending)\\r\\n                count = count + 1;\\r\\n        }\\r\\n\\r\\n        // Collect up all the pending events\\r\\n        bytes32[] memory output = new bytes32[](count);\\r\\n\\r\\n        if (count > 0) {\\r\\n            uint index = 0;\\r\\n            for (uint n = events.length;  n > 0;  n = n - 1) {\\r\\n                if (events[n - 1].outcome == EventOutcome.Pending) {\\r\\n                    output[index] = events[n - 1].id;\\r\\n                    index = index + 1;\\r\\n                }\\r\\n            }\\r\\n        }\\r\\n\\r\\n        return output;\\r\\n    }\\r\\n\\r\\n    /**\\r\\n     * @notice gets the unique ids of events, pending and decided, in reverse chronological order\\r\\n     * @return an array of unique match ids\\r\\n     */\\r\\n    function getAllSportEvents()\\r\\n        public view override\\r\\n        returns (bytes32[] memory)\\r\\n    {\\r\\n        bytes32[] memory eventIds = new bytes32[](events.length);\\r\\n\\r\\n        // Collect all event ids\\r\\n        if (events.length > 0) {\\r\\n            uint index = 0;\\r\\n            for (uint n = events.length; n > 0; n = n - 1) {\\r\\n                eventIds[index = index + 1] = events[n - 1].id;\\r\\n            }\\r\\n        }\\r\\n\\r\\n        return eventIds;\\r\\n    }\\r\\n\\r\\n    /**\\r\\n     * @notice gets the specified sport event and return its data\\r\\n     * @param _eventId the unique id of the desired event\\r\\n     * @return id   the id of the event\\r\\n     * @return name the name of the event\\r\\n     * @return participants a string with the name of the event's participants separated with a pipe symbol ('|')\\r\\n     * @return participantCount the number of the event's participants\\r\\n     * @return date when the event takes place\\r\\n     * @return kind what is sport kind\\r\\n     * @return outcome an integer that represents the event outcome\\r\\n     * @return winner the index of the winner\\r\\n     */\\r\\n    function getEvent(bytes32 _eventId)\\r\\n        public view override\\r\\n        returns (\\r\\n            bytes32       id,\\r\\n            string memory name,\\r\\n            string memory participants,\\r\\n            uint8         participantCount,\\r\\n            uint          date,\\r\\n            SportKind     kind,\\r\\n            EventOutcome  outcome,\\r\\n            int8          winner\\r\\n        )\\r\\n    {\\r\\n        // Get the sport event\\r\\n        if (eventExists(_eventId)) {\\r\\n            SportEvent storage theMatch = events[_getMatchIndex(_eventId)];\\r\\n            return (theMatch.id, theMatch.name, theMatch.participants, theMatch.participantCount, theMatch.date, theMatch.kind, theMatch.outcome, theMatch.winner);\\r\\n        }\\r\\n        else {\\r\\n            return (_eventId, \\\"\\\", \\\"\\\", 0, 0, SportKind.Soccer, EventOutcome.Pending, -1);\\r\\n        }\\r\\n    }\\r\\n\\r\\n\\r\\n    function getLatestEvent(bool _pending)\\r\\n        public view override\\r\\n        returns (\\r\\n            bytes32         id,\\r\\n            string memory   name,\\r\\n            string memory   participants,\\r\\n            uint8           participantCount,\\r\\n            uint            date,\\r\\n            SportKind       kind,\\r\\n            EventOutcome    outcome,\\r\\n            int8            winner\\r\\n        )\\r\\n    {\\r\\n        bytes32          eventId = 0;\\r\\n        bytes32[] memory ids;\\r\\n\\r\\n        if (_pending) {\\r\\n            ids = getPendingEvents();\\r\\n        } else {\\r\\n            ids = getAllSportEvents();\\r\\n        }\\r\\n        if (ids.length > 0) {\\r\\n            eventId = ids[0];\\r\\n        }\\r\\n\\r\\n        // Return a null sport event by default\\r\\n        return getEvent(eventId);\\r\\n    }\\r\\n\\r\\n\\r\\n    /**\\r\\n     * @notice gets the address of this contract\\r\\n     * @return the address of the BetOracle smart-contract\\r\\n     */\\r\\n    function getAddress()\\r\\n        public view\\r\\n        returns (address)\\r\\n    {\\r\\n        return address(this);\\r\\n    }\\r\\n\\r\\n    /**\\r\\n     * @notice can be used by a client contract to ensure that they've connected to this contract interface successfully\\r\\n     * @return true, unconditionally\\r\\n     */\\r\\n    function testConnection()\\r\\n        public pure override\\r\\n        returns (bool)\\r\\n    {\\r\\n        return true;\\r\\n    }\\r\\n\\r\\n}\\r\\n\",\"keccak256\":\"0xc32d3694aa2e9e2a14c1c7866c252cd7a464b3a49f0ba54bf2c5fd3fe697f8bf\",\"license\":\"MIT\"},\"contracts/OracleInterface.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\r\\npragma solidity ^0.8.4;\\r\\n\\r\\n/**\\r\\n * @title The interface for the events Oracle (`BetOracle`)\\r\\n * @notice Declares the functions that the `BetOracle` contract exposes externally\\r\\n */\\r\\ninterface OracleInterface {\\r\\n\\r\\n\\r\\n    enum EventOutcome {\\r\\n        Pending,    //match has not been fought to decision\\r\\n        Underway,   //match has started & is underway\\r\\n        Draw,       //anything other than a clear winner (e.g. cancelled)\\r\\n        Decided     //index of participant who is the winner\\r\\n    }\\r\\n\\r\\n    enum SportKind {\\r\\n        Soccer,\\r\\n        Rugby,\\r\\n        Basketball\\r\\n    }\\r\\n\\r\\n    function eventExists(bytes32 _eventId)\\r\\n        external view returns (bool);\\r\\n\\r\\n    function getPendingEvents()\\r\\n        external view returns (bytes32[] memory);\\r\\n\\r\\n    function getAllSportEvents()\\r\\n        external view returns (bytes32[] memory);\\r\\n\\r\\n    function getEvent(bytes32 _eventId)\\r\\n        external view returns (\\r\\n            bytes32       id,\\r\\n            string memory name,\\r\\n            string memory participants,\\r\\n            uint8         participantCount,\\r\\n            uint          date,\\r\\n            SportKind     kind,\\r\\n            EventOutcome  outcome,\\r\\n            int8          winner\\r\\n        );\\r\\n\\r\\n    function getLatestEvent(bool _pending)\\r\\n        external view returns (\\r\\n            bytes32       id,\\r\\n            string memory name,\\r\\n            string memory participants,\\r\\n            uint8          participantCount,\\r\\n            uint          date,\\r\\n            SportKind     kind,\\r\\n            EventOutcome  outcome,\\r\\n            int8          winner\\r\\n        );\\r\\n\\r\\n    function testConnection()\\r\\n        external pure returns (bool);\\r\\n\\r\\n}\\r\\n\",\"keccak256\":\"0x999fe1d63506e2a33cddf442f79aa07bca1ee7ebe48988a1ecb600389feaf068\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061002d61002261003960201b60201c565b61004160201b60201c565b60018081905550610105565b600033905090565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050816000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508173ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a35050565b61226a80620001156000396000f3fe608060405234801561001057600080fd5b50600436106100b45760003560e01c80638c172fa2116100715780638c172fa2146101825780638da5cb5b146101b9578063a717e89a146101d7578063b4184e70146101f5578063ef5286bf14610213578063f2fde38b14610243576100b4565b8063118e58bd146100b957806329e54269146100e95780633412a15c1461012057806338cc48311461013e578063715018a61461015c5780637898d33414610166575b600080fd5b6100d360048036038101906100ce9190611662565b61025f565b6040516100e09190611a95565b60405180910390f35b61010360048036038101906100fe9190611639565b61029c565b604051610117989796959493929190611acb565b60405180910390f35b610128610347565b6040516101359190611a95565b60405180910390f35b610146610350565b6040516101539190611a58565b60405180910390f35b610164610358565b005b610180600480360381019061017b919061168b565b6103e0565b005b61019c60048036038101906101979190611662565b610665565b6040516101b0989796959493929190611acb565b60405180910390f35b6101c16108ca565b6040516101ce9190611a58565b60405180910390f35b6101df6108f3565b6040516101ec9190611a73565b60405180910390f35b6101fd610a5a565b60405161020a9190611a73565b60405180910390f35b61022d600480360381019061022891906116da565b610d9d565b60405161023a9190611ab0565b60405180910390f35b61025d60048036038101906102589190611610565b611270565b005b60008060028054905014156102775760009050610297565b600060036000848152602001908152602001600020549050600081119150505b919050565b60006060806000806000806000806000801b905060608a156102c7576102c0610a5a565b90506102d2565b6102cf6108f3565b90505b6000815111156103215780600081518110610316577f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b602002602001015191505b61032a82610665565b995099509950995099509950995099505050919395975091939597565b60006001905090565b600030905090565b610360611368565b73ffffffffffffffffffffffffffffffffffffffff1661037e6108ca565b73ffffffffffffffffffffffffffffffffffffffff16146103d4576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004016103cb90611c23565b60405180910390fd5b6103de6000611370565b565b6103e8611368565b73ffffffffffffffffffffffffffffffffffffffff166104066108ca565b73ffffffffffffffffffffffffffffffffffffffff161461045c576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161045390611c23565b60405180910390fd5b6104658361025f565b61046e57600080fd5b600061047984611434565b90506000600282815481106104b7577f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b90600052602060002090600602019050600380811115610500577f4e487b7100000000000000000000000000000000000000000000000000000000600052602160045260246000fd5b846003811115610539577f4e487b7100000000000000000000000000000000000000000000000000000000600052602160045260246000fd5b14156105735760008360000b1215801561056957508260ff168160030160009054906101000a900460ff1660ff16115b61057257600080fd5b5b838160050160016101000a81548160ff021916908360038111156105c0577f4e487b7100000000000000000000000000000000000000000000000000000000600052602160045260246000fd5b02179055506003808111156105fe577f4e487b7100000000000000000000000000000000000000000000000000000000600052602160045260246000fd5b846003811115610637577f4e487b7100000000000000000000000000000000000000000000000000000000600052602160045260246000fd5b141561065e57828160050160026101000a81548160ff021916908360000b60ff1602179055505b5050505050565b6000606080600080600080600061067b8961025f565b1561085c576000600261068d8b611434565b815481106106c4577f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b90600052602060002090600602019050806000015481600101826002018360030160009054906101000a900460ff1684600401548560050160009054906101000a900460ff168660050160019054906101000a900460ff168760050160029054906101000a900460000b86805461073a90611eed565b80601f016020809104026020016040519081016040528092919081815260200182805461076690611eed565b80156107b35780601f10610788576101008083540402835291602001916107b3565b820191906000526020600020905b81548152906001019060200180831161079657829003601f168201915b505050505096508580546107c690611eed565b80601f01602080910402602001604051908101604052809291908181526020018280546107f290611eed565b801561083f5780601f106108145761010080835404028352916020019161083f565b820191906000526020600020905b81548152906001019060200180831161082257829003601f168201915b5050505050955098509850985098509850985098509850506108bf565b886000806000807fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff604051806020016040528060008152509493929190604051806020016040528060008152509493929190975097509750975097509750975097505b919395975091939597565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b6060600060028054905067ffffffffffffffff81111561093c577f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b60405190808252806020026020018201604052801561096a5781602001602082028036833780820191505090505b50905060006002805490501115610a535760008060028054905090505b6000811115610a5057600260018261099f9190611daf565b815481106109d6577f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b906000526020600020906006020160000154836001846109f69190611d59565b93508381518110610a30577f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b602002602001018181525050600181610a499190611daf565b9050610987565b50505b8091505090565b60606000805b600280549050811015610b625760006003811115610aa7577f4e487b7100000000000000000000000000000000000000000000000000000000600052602160045260246000fd5b60028281548110610ae1577f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b906000526020600020906006020160050160019054906101000a900460ff166003811115610b38577f4e487b7100000000000000000000000000000000000000000000000000000000600052602160045260246000fd5b1415610b4e57600182610b4b9190611d59565b91505b600181610b5b9190611d59565b9050610a60565b5060008167ffffffffffffffff811115610ba5577f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b604051908082528060200260200182016040528015610bd35781602001602082028036833780820191505090505b5090506000821115610d955760008060028054905090505b6000811115610d925760006003811115610c2e577f4e487b7100000000000000000000000000000000000000000000000000000000600052602160045260246000fd5b6002600183610c3d9190611daf565b81548110610c74577f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b906000526020600020906006020160050160019054906101000a900460ff166003811115610ccb577f4e487b7100000000000000000000000000000000000000000000000000000000600052602160045260246000fd5b1415610d7e576002600182610ce09190611daf565b81548110610d17577f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b906000526020600020906006020160000154838381518110610d62577f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b602002602001018181525050600182610d7b9190611d59565b91505b600181610d8b9190611daf565b9050610beb565b50505b809250505090565b6000610da7611368565b73ffffffffffffffffffffffffffffffffffffffff16610dc56108ca565b73ffffffffffffffffffffffffffffffffffffffff1614610e1b576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610e1290611c23565b60405180910390fd5b60026001541415610e61576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610e5890611c83565b60405180910390fd5b600260018190555060008690506000815111610eb2576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610ea990611c63565b60405180910390fd5b62093a8042610ec19190611d59565b841015610f03576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610efa90611c43565b60405180910390fd5b600087868686604051602001610f1c9493929190611a0e565b604051602081830303815290604052805190602001209050610f3d8161025f565b15610f7d576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610f7490611c03565b60405180910390fd5b60026040518061010001604052808381526020018a81526020018981526020018860ff168152602001878152602001866002811115610fe5577f4e487b7100000000000000000000000000000000000000000000000000000000600052602160045260246000fd5b815260200160006003811115611024577f4e487b7100000000000000000000000000000000000000000000000000000000600052602160045260246000fd5b81526020017fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff60000b815250908060018154018082558091505060019003906000526020600020906006020160009091909190915060008201518160000155602082015181600101908051906020019061109f92919061145d565b5060408201518160020190805190602001906110bc92919061145d565b5060608201518160030160006101000a81548160ff021916908360ff1602179055506080820151816004015560a08201518160050160006101000a81548160ff02191690836002811115611139577f4e487b7100000000000000000000000000000000000000000000000000000000600052602160045260246000fd5b021790555060c08201518160050160016101000a81548160ff0219169083600381111561118f577f4e487b7100000000000000000000000000000000000000000000000000000000600052602160045260246000fd5b021790555060e08201518160050160026101000a81548160ff021916908360000b60ff1602179055505050600060016002805490506111ce9190611daf565b90506001816111dd9190611d59565b60036000848152602001908152602001600020819055507fd4d61f8dd5ed02077010e5ad6c15383271a2535f03580863eac273b6d6ac1047828a8a8a8a8a60007fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff604051611252989796959493929190611b57565b60405180910390a18193505050506001808190555095945050505050565b611278611368565b73ffffffffffffffffffffffffffffffffffffffff166112966108ca565b73ffffffffffffffffffffffffffffffffffffffff16146112ec576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004016112e390611c23565b60405180910390fd5b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16141561135c576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161135390611be3565b60405180910390fd5b61136581611370565b50565b600033905090565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050816000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508173ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a35050565b6000600160036000848152602001908152602001600020546114569190611daf565b9050919050565b82805461146990611eed565b90600052602060002090601f01602090048101928261148b57600085556114d2565b82601f106114a457805160ff19168380011785556114d2565b828001600101855582156114d2579182015b828111156114d15782518255916020019190600101906114b6565b5b5090506114df91906114e3565b5090565b5b808211156114fc5760008160009055506001016114e4565b5090565b600061151361150e84611cc8565b611ca3565b90508281526020810184848401111561152b57600080fd5b611536848285611eab565b509392505050565b60008135905061154d8161218a565b92915050565b600081359050611562816121a1565b92915050565b600081359050611577816121b8565b92915050565b60008135905061158c816121cf565b92915050565b6000813590506115a1816121df565b92915050565b6000813590506115b6816121ef565b92915050565b600082601f8301126115cd57600080fd5b81356115dd848260208601611500565b91505092915050565b6000813590506115f581612206565b92915050565b60008135905061160a8161221d565b92915050565b60006020828403121561162257600080fd5b60006116308482850161153e565b91505092915050565b60006020828403121561164b57600080fd5b600061165984828501611553565b91505092915050565b60006020828403121561167457600080fd5b600061168284828501611568565b91505092915050565b6000806000606084860312156116a057600080fd5b60006116ae86828701611568565b93505060206116bf8682870161157d565b92505060406116d0868287016115a7565b9150509250925092565b600080600080600060a086880312156116f257600080fd5b600086013567ffffffffffffffff81111561170c57600080fd5b611718888289016115bc565b955050602086013567ffffffffffffffff81111561173557600080fd5b611741888289016115bc565b9450506040611752888289016115fb565b9350506060611763888289016115e6565b925050608061177488828901611592565b9150509295509295909350565b600061178d8383611815565b60208301905092915050565b6117a281611de3565b82525050565b60006117b382611d09565b6117bd8185611d2c565b93506117c883611cf9565b8060005b838110156117f95781516117e08882611781565b97506117eb83611d1f565b9250506001810190506117cc565b5085935050505092915050565b61180f81611df5565b82525050565b61181e81611e01565b82525050565b61182d81611e01565b82525050565b61183c81611e75565b82525050565b61184b81611e87565b82525050565b61186261185d82611e87565b611f5a565b82525050565b61187181611e31565b82525050565b61188081611e99565b82525050565b600061189182611d14565b61189b8185611d3d565b93506118ab818560208601611eba565b6118b481612028565b840191505092915050565b60006118ca82611d14565b6118d48185611d4e565b93506118e4818560208601611eba565b80840191505092915050565b60006118fd602683611d3d565b915061190882612046565b604082019050919050565b6000611920601483611d3d565b915061192b82612095565b602082019050919050565b6000611943602083611d3d565b915061194e826120be565b602082019050919050565b6000611966602083611d3d565b9150611971826120e7565b602082019050919050565b6000611989601583611d3d565b915061199482612110565b602082019050919050565b60006119ac601f83611d3d565b91506119b782612139565b602082019050919050565b6119cb81611e5e565b82525050565b6119e26119dd82611e5e565b611f50565b82525050565b6119f181611e68565b82525050565b611a08611a0382611e68565b611f5a565b82525050565b6000611a1a82876118bf565b9150611a2682866119f7565b600182019150611a3682856119d1565b602082019150611a468284611851565b60018201915081905095945050505050565b6000602082019050611a6d6000830184611799565b92915050565b60006020820190508181036000830152611a8d81846117a8565b905092915050565b6000602082019050611aaa6000830184611806565b92915050565b6000602082019050611ac56000830184611824565b92915050565b600061010082019050611ae1600083018b611824565b8181036020830152611af3818a611886565b90508181036040830152611b078189611886565b9050611b1660608301886119e8565b611b2360808301876119c2565b611b3060a0830186611842565b611b3d60c0830185611833565b611b4a60e0830184611868565b9998505050505050505050565b600061010082019050611b6d600083018b611824565b8181036020830152611b7f818a611886565b90508181036040830152611b938189611886565b9050611ba260608301886119e8565b611baf60808301876119c2565b611bbc60a0830186611842565b611bc960c0830185611833565b611bd660e0830184611877565b9998505050505050505050565b60006020820190508181036000830152611bfc816118f0565b9050919050565b60006020820190508181036000830152611c1c81611913565b9050919050565b60006020820190508181036000830152611c3c81611936565b9050919050565b60006020820190508181036000830152611c5c81611959565b9050919050565b60006020820190508181036000830152611c7c8161197c565b9050919050565b60006020820190508181036000830152611c9c8161199f565b9050919050565b6000611cad611cbe565b9050611cb98282611f1f565b919050565b6000604051905090565b600067ffffffffffffffff821115611ce357611ce2611ff9565b5b611cec82612028565b9050602081019050919050565b6000819050602082019050919050565b600081519050919050565b600081519050919050565b6000602082019050919050565b600082825260208201905092915050565b600082825260208201905092915050565b600081905092915050565b6000611d6482611e5e565b9150611d6f83611e5e565b9250827fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff03821115611da457611da3611f6c565b5b828201905092915050565b6000611dba82611e5e565b9150611dc583611e5e565b925082821015611dd857611dd7611f6c565b5b828203905092915050565b6000611dee82611e3e565b9050919050565b60008115159050919050565b6000819050919050565b6000819050611e1982612162565b919050565b6000819050611e2c82612176565b919050565b60008160000b9050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b600060ff82169050919050565b6000611e8082611e0b565b9050919050565b6000611e9282611e1e565b9050919050565b6000611ea482611e31565b9050919050565b82818337600083830152505050565b60005b83811015611ed8578082015181840152602081019050611ebd565b83811115611ee7576000848401525b50505050565b60006002820490506001821680611f0557607f821691505b60208210811415611f1957611f18611fca565b5b50919050565b611f2882612028565b810181811067ffffffffffffffff82111715611f4757611f46611ff9565b5b80604052505050565b6000819050919050565b6000611f6582612039565b9050919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b7f4e487b7100000000000000000000000000000000000000000000000000000000600052602160045260246000fd5b7f4e487b7100000000000000000000000000000000000000000000000000000000600052602260045260246000fd5b7f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b6000601f19601f8301169050919050565b60008160f81b9050919050565b7f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206160008201527f6464726573730000000000000000000000000000000000000000000000000000602082015250565b7f4576656e7420616c726561647920657869737473000000000000000000000000600082015250565b7f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572600082015250565b7f5f64617465206d757374206265203e3d2031207765656b2066726f6d206e6f77600082015250565b7f5f6e616d652063616e6e6f7420626520656d7074790000000000000000000000600082015250565b7f5265656e7472616e637947756172643a207265656e7472616e742063616c6c00600082015250565b6004811061217357612172611f9b565b5b50565b6003811061218757612186611f9b565b5b50565b61219381611de3565b811461219e57600080fd5b50565b6121aa81611df5565b81146121b557600080fd5b50565b6121c181611e01565b81146121cc57600080fd5b50565b600481106121dc57600080fd5b50565b600381106121ec57600080fd5b50565b6121f881611e31565b811461220357600080fd5b50565b61220f81611e5e565b811461221a57600080fd5b50565b61222681611e68565b811461223157600080fd5b5056fea26469706673582212208244f2a96b863846032c2901ee23b6e5609ac34ed8ac9b63c323701204a2fbc464736f6c63430008040033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100b45760003560e01c80638c172fa2116100715780638c172fa2146101825780638da5cb5b146101b9578063a717e89a146101d7578063b4184e70146101f5578063ef5286bf14610213578063f2fde38b14610243576100b4565b8063118e58bd146100b957806329e54269146100e95780633412a15c1461012057806338cc48311461013e578063715018a61461015c5780637898d33414610166575b600080fd5b6100d360048036038101906100ce9190611662565b61025f565b6040516100e09190611a95565b60405180910390f35b61010360048036038101906100fe9190611639565b61029c565b604051610117989796959493929190611acb565b60405180910390f35b610128610347565b6040516101359190611a95565b60405180910390f35b610146610350565b6040516101539190611a58565b60405180910390f35b610164610358565b005b610180600480360381019061017b919061168b565b6103e0565b005b61019c60048036038101906101979190611662565b610665565b6040516101b0989796959493929190611acb565b60405180910390f35b6101c16108ca565b6040516101ce9190611a58565b60405180910390f35b6101df6108f3565b6040516101ec9190611a73565b60405180910390f35b6101fd610a5a565b60405161020a9190611a73565b60405180910390f35b61022d600480360381019061022891906116da565b610d9d565b60405161023a9190611ab0565b60405180910390f35b61025d60048036038101906102589190611610565b611270565b005b60008060028054905014156102775760009050610297565b600060036000848152602001908152602001600020549050600081119150505b919050565b60006060806000806000806000806000801b905060608a156102c7576102c0610a5a565b90506102d2565b6102cf6108f3565b90505b6000815111156103215780600081518110610316577f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b602002602001015191505b61032a82610665565b995099509950995099509950995099505050919395975091939597565b60006001905090565b600030905090565b610360611368565b73ffffffffffffffffffffffffffffffffffffffff1661037e6108ca565b73ffffffffffffffffffffffffffffffffffffffff16146103d4576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004016103cb90611c23565b60405180910390fd5b6103de6000611370565b565b6103e8611368565b73ffffffffffffffffffffffffffffffffffffffff166104066108ca565b73ffffffffffffffffffffffffffffffffffffffff161461045c576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161045390611c23565b60405180910390fd5b6104658361025f565b61046e57600080fd5b600061047984611434565b90506000600282815481106104b7577f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b90600052602060002090600602019050600380811115610500577f4e487b7100000000000000000000000000000000000000000000000000000000600052602160045260246000fd5b846003811115610539577f4e487b7100000000000000000000000000000000000000000000000000000000600052602160045260246000fd5b14156105735760008360000b1215801561056957508260ff168160030160009054906101000a900460ff1660ff16115b61057257600080fd5b5b838160050160016101000a81548160ff021916908360038111156105c0577f4e487b7100000000000000000000000000000000000000000000000000000000600052602160045260246000fd5b02179055506003808111156105fe577f4e487b7100000000000000000000000000000000000000000000000000000000600052602160045260246000fd5b846003811115610637577f4e487b7100000000000000000000000000000000000000000000000000000000600052602160045260246000fd5b141561065e57828160050160026101000a81548160ff021916908360000b60ff1602179055505b5050505050565b6000606080600080600080600061067b8961025f565b1561085c576000600261068d8b611434565b815481106106c4577f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b90600052602060002090600602019050806000015481600101826002018360030160009054906101000a900460ff1684600401548560050160009054906101000a900460ff168660050160019054906101000a900460ff168760050160029054906101000a900460000b86805461073a90611eed565b80601f016020809104026020016040519081016040528092919081815260200182805461076690611eed565b80156107b35780601f10610788576101008083540402835291602001916107b3565b820191906000526020600020905b81548152906001019060200180831161079657829003601f168201915b505050505096508580546107c690611eed565b80601f01602080910402602001604051908101604052809291908181526020018280546107f290611eed565b801561083f5780601f106108145761010080835404028352916020019161083f565b820191906000526020600020905b81548152906001019060200180831161082257829003601f168201915b5050505050955098509850985098509850985098509850506108bf565b886000806000807fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff604051806020016040528060008152509493929190604051806020016040528060008152509493929190975097509750975097509750975097505b919395975091939597565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905090565b6060600060028054905067ffffffffffffffff81111561093c577f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b60405190808252806020026020018201604052801561096a5781602001602082028036833780820191505090505b50905060006002805490501115610a535760008060028054905090505b6000811115610a5057600260018261099f9190611daf565b815481106109d6577f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b906000526020600020906006020160000154836001846109f69190611d59565b93508381518110610a30577f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b602002602001018181525050600181610a499190611daf565b9050610987565b50505b8091505090565b60606000805b600280549050811015610b625760006003811115610aa7577f4e487b7100000000000000000000000000000000000000000000000000000000600052602160045260246000fd5b60028281548110610ae1577f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b906000526020600020906006020160050160019054906101000a900460ff166003811115610b38577f4e487b7100000000000000000000000000000000000000000000000000000000600052602160045260246000fd5b1415610b4e57600182610b4b9190611d59565b91505b600181610b5b9190611d59565b9050610a60565b5060008167ffffffffffffffff811115610ba5577f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b604051908082528060200260200182016040528015610bd35781602001602082028036833780820191505090505b5090506000821115610d955760008060028054905090505b6000811115610d925760006003811115610c2e577f4e487b7100000000000000000000000000000000000000000000000000000000600052602160045260246000fd5b6002600183610c3d9190611daf565b81548110610c74577f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b906000526020600020906006020160050160019054906101000a900460ff166003811115610ccb577f4e487b7100000000000000000000000000000000000000000000000000000000600052602160045260246000fd5b1415610d7e576002600182610ce09190611daf565b81548110610d17577f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b906000526020600020906006020160000154838381518110610d62577f4e487b7100000000000000000000000000000000000000000000000000000000600052603260045260246000fd5b602002602001018181525050600182610d7b9190611d59565b91505b600181610d8b9190611daf565b9050610beb565b50505b809250505090565b6000610da7611368565b73ffffffffffffffffffffffffffffffffffffffff16610dc56108ca565b73ffffffffffffffffffffffffffffffffffffffff1614610e1b576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610e1290611c23565b60405180910390fd5b60026001541415610e61576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610e5890611c83565b60405180910390fd5b600260018190555060008690506000815111610eb2576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610ea990611c63565b60405180910390fd5b62093a8042610ec19190611d59565b841015610f03576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610efa90611c43565b60405180910390fd5b600087868686604051602001610f1c9493929190611a0e565b604051602081830303815290604052805190602001209050610f3d8161025f565b15610f7d576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401610f7490611c03565b60405180910390fd5b60026040518061010001604052808381526020018a81526020018981526020018860ff168152602001878152602001866002811115610fe5577f4e487b7100000000000000000000000000000000000000000000000000000000600052602160045260246000fd5b815260200160006003811115611024577f4e487b7100000000000000000000000000000000000000000000000000000000600052602160045260246000fd5b81526020017fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff60000b815250908060018154018082558091505060019003906000526020600020906006020160009091909190915060008201518160000155602082015181600101908051906020019061109f92919061145d565b5060408201518160020190805190602001906110bc92919061145d565b5060608201518160030160006101000a81548160ff021916908360ff1602179055506080820151816004015560a08201518160050160006101000a81548160ff02191690836002811115611139577f4e487b7100000000000000000000000000000000000000000000000000000000600052602160045260246000fd5b021790555060c08201518160050160016101000a81548160ff0219169083600381111561118f577f4e487b7100000000000000000000000000000000000000000000000000000000600052602160045260246000fd5b021790555060e08201518160050160026101000a81548160ff021916908360000b60ff1602179055505050600060016002805490506111ce9190611daf565b90506001816111dd9190611d59565b60036000848152602001908152602001600020819055507fd4d61f8dd5ed02077010e5ad6c15383271a2535f03580863eac273b6d6ac1047828a8a8a8a8a60007fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff604051611252989796959493929190611b57565b60405180910390a18193505050506001808190555095945050505050565b611278611368565b73ffffffffffffffffffffffffffffffffffffffff166112966108ca565b73ffffffffffffffffffffffffffffffffffffffff16146112ec576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004016112e390611c23565b60405180910390fd5b600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16141561135c576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161135390611be3565b60405180910390fd5b61136581611370565b50565b600033905090565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050816000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508173ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff167f8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e060405160405180910390a35050565b6000600160036000848152602001908152602001600020546114569190611daf565b9050919050565b82805461146990611eed565b90600052602060002090601f01602090048101928261148b57600085556114d2565b82601f106114a457805160ff19168380011785556114d2565b828001600101855582156114d2579182015b828111156114d15782518255916020019190600101906114b6565b5b5090506114df91906114e3565b5090565b5b808211156114fc5760008160009055506001016114e4565b5090565b600061151361150e84611cc8565b611ca3565b90508281526020810184848401111561152b57600080fd5b611536848285611eab565b509392505050565b60008135905061154d8161218a565b92915050565b600081359050611562816121a1565b92915050565b600081359050611577816121b8565b92915050565b60008135905061158c816121cf565b92915050565b6000813590506115a1816121df565b92915050565b6000813590506115b6816121ef565b92915050565b600082601f8301126115cd57600080fd5b81356115dd848260208601611500565b91505092915050565b6000813590506115f581612206565b92915050565b60008135905061160a8161221d565b92915050565b60006020828403121561162257600080fd5b60006116308482850161153e565b91505092915050565b60006020828403121561164b57600080fd5b600061165984828501611553565b91505092915050565b60006020828403121561167457600080fd5b600061168284828501611568565b91505092915050565b6000806000606084860312156116a057600080fd5b60006116ae86828701611568565b93505060206116bf8682870161157d565b92505060406116d0868287016115a7565b9150509250925092565b600080600080600060a086880312156116f257600080fd5b600086013567ffffffffffffffff81111561170c57600080fd5b611718888289016115bc565b955050602086013567ffffffffffffffff81111561173557600080fd5b611741888289016115bc565b9450506040611752888289016115fb565b9350506060611763888289016115e6565b925050608061177488828901611592565b9150509295509295909350565b600061178d8383611815565b60208301905092915050565b6117a281611de3565b82525050565b60006117b382611d09565b6117bd8185611d2c565b93506117c883611cf9565b8060005b838110156117f95781516117e08882611781565b97506117eb83611d1f565b9250506001810190506117cc565b5085935050505092915050565b61180f81611df5565b82525050565b61181e81611e01565b82525050565b61182d81611e01565b82525050565b61183c81611e75565b82525050565b61184b81611e87565b82525050565b61186261185d82611e87565b611f5a565b82525050565b61187181611e31565b82525050565b61188081611e99565b82525050565b600061189182611d14565b61189b8185611d3d565b93506118ab818560208601611eba565b6118b481612028565b840191505092915050565b60006118ca82611d14565b6118d48185611d4e565b93506118e4818560208601611eba565b80840191505092915050565b60006118fd602683611d3d565b915061190882612046565b604082019050919050565b6000611920601483611d3d565b915061192b82612095565b602082019050919050565b6000611943602083611d3d565b915061194e826120be565b602082019050919050565b6000611966602083611d3d565b9150611971826120e7565b602082019050919050565b6000611989601583611d3d565b915061199482612110565b602082019050919050565b60006119ac601f83611d3d565b91506119b782612139565b602082019050919050565b6119cb81611e5e565b82525050565b6119e26119dd82611e5e565b611f50565b82525050565b6119f181611e68565b82525050565b611a08611a0382611e68565b611f5a565b82525050565b6000611a1a82876118bf565b9150611a2682866119f7565b600182019150611a3682856119d1565b602082019150611a468284611851565b60018201915081905095945050505050565b6000602082019050611a6d6000830184611799565b92915050565b60006020820190508181036000830152611a8d81846117a8565b905092915050565b6000602082019050611aaa6000830184611806565b92915050565b6000602082019050611ac56000830184611824565b92915050565b600061010082019050611ae1600083018b611824565b8181036020830152611af3818a611886565b90508181036040830152611b078189611886565b9050611b1660608301886119e8565b611b2360808301876119c2565b611b3060a0830186611842565b611b3d60c0830185611833565b611b4a60e0830184611868565b9998505050505050505050565b600061010082019050611b6d600083018b611824565b8181036020830152611b7f818a611886565b90508181036040830152611b938189611886565b9050611ba260608301886119e8565b611baf60808301876119c2565b611bbc60a0830186611842565b611bc960c0830185611833565b611bd660e0830184611877565b9998505050505050505050565b60006020820190508181036000830152611bfc816118f0565b9050919050565b60006020820190508181036000830152611c1c81611913565b9050919050565b60006020820190508181036000830152611c3c81611936565b9050919050565b60006020820190508181036000830152611c5c81611959565b9050919050565b60006020820190508181036000830152611c7c8161197c565b9050919050565b60006020820190508181036000830152611c9c8161199f565b9050919050565b6000611cad611cbe565b9050611cb98282611f1f565b919050565b6000604051905090565b600067ffffffffffffffff821115611ce357611ce2611ff9565b5b611cec82612028565b9050602081019050919050565b6000819050602082019050919050565b600081519050919050565b600081519050919050565b6000602082019050919050565b600082825260208201905092915050565b600082825260208201905092915050565b600081905092915050565b6000611d6482611e5e565b9150611d6f83611e5e565b9250827fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff03821115611da457611da3611f6c565b5b828201905092915050565b6000611dba82611e5e565b9150611dc583611e5e565b925082821015611dd857611dd7611f6c565b5b828203905092915050565b6000611dee82611e3e565b9050919050565b60008115159050919050565b6000819050919050565b6000819050611e1982612162565b919050565b6000819050611e2c82612176565b919050565b60008160000b9050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b600060ff82169050919050565b6000611e8082611e0b565b9050919050565b6000611e9282611e1e565b9050919050565b6000611ea482611e31565b9050919050565b82818337600083830152505050565b60005b83811015611ed8578082015181840152602081019050611ebd565b83811115611ee7576000848401525b50505050565b60006002820490506001821680611f0557607f821691505b60208210811415611f1957611f18611fca565b5b50919050565b611f2882612028565b810181811067ffffffffffffffff82111715611f4757611f46611ff9565b5b80604052505050565b6000819050919050565b6000611f6582612039565b9050919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b7f4e487b7100000000000000000000000000000000000000000000000000000000600052602160045260246000fd5b7f4e487b7100000000000000000000000000000000000000000000000000000000600052602260045260246000fd5b7f4e487b7100000000000000000000000000000000000000000000000000000000600052604160045260246000fd5b6000601f19601f8301169050919050565b60008160f81b9050919050565b7f4f776e61626c653a206e6577206f776e657220697320746865207a65726f206160008201527f6464726573730000000000000000000000000000000000000000000000000000602082015250565b7f4576656e7420616c726561647920657869737473000000000000000000000000600082015250565b7f4f776e61626c653a2063616c6c6572206973206e6f7420746865206f776e6572600082015250565b7f5f64617465206d757374206265203e3d2031207765656b2066726f6d206e6f77600082015250565b7f5f6e616d652063616e6e6f7420626520656d7074790000000000000000000000600082015250565b7f5265656e7472616e637947756172643a207265656e7472616e742063616c6c00600082015250565b6004811061217357612172611f9b565b5b50565b6003811061218757612186611f9b565b5b50565b61219381611de3565b811461219e57600080fd5b50565b6121aa81611df5565b81146121b557600080fd5b50565b6121c181611e01565b81146121cc57600080fd5b50565b600481106121dc57600080fd5b50565b600381106121ec57600080fd5b50565b6121f881611e31565b811461220357600080fd5b50565b61220f81611e5e565b811461221a57600080fd5b50565b61222681611e68565b811461223157600080fd5b5056fea26469706673582212208244f2a96b863846032c2901ee23b6e5609ac34ed8ac9b63c323701204a2fbc464736f6c63430008040033",
+  "devdoc": {
+    "events": {
+      "SportEventAdded(bytes32,string,string,uint8,uint256,uint8,uint8,int8)": {
+        "details": "Triggered once an event has been added"
+      }
+    },
+    "kind": "dev",
+    "methods": {
+      "addSportEvent(string,string,uint8,uint256,uint8)": {
+        "params": {
+          "_date": "date set for the sport event",
+          "_kind": "kind of the sport (e.g. soccer/rugby/basketball)",
+          "_name": "descriptive name for the sport event (e.g. Pac vs. Mayweather 2016)",
+          "_participantCount": "number of participants",
+          "_participants": "|-delimited string of participants names (e.g. \"Montpellier|Monaco\")"
+        },
+        "returns": {
+          "_0": "the unique id of the newly created sport event"
+        }
+      },
+      "declareOutcome(bytes32,uint8,int8)": {
+        "params": {
+          "_eventId": "unique id of the match to modify",
+          "_outcome": "outcome of the match",
+          "_winner": "0-based id of the winnner"
+        }
+      },
+      "eventExists(bytes32)": {
+        "params": {
+          "_eventId": "the id of a sport event id"
+        },
+        "returns": {
+          "_0": "true if sport event exists and its id is valid"
+        }
+      },
+      "getAddress()": {
+        "returns": {
+          "_0": "the address of the BetOracle smart-contract"
+        }
+      },
+      "getAllSportEvents()": {
+        "returns": {
+          "_0": "an array of unique match ids"
+        }
+      },
+      "getEvent(bytes32)": {
+        "params": {
+          "_eventId": "the unique id of the desired event"
+        },
+        "returns": {
+          "date": "when the event takes place",
+          "id": "  the id of the event",
+          "kind": "what is sport kind",
+          "name": "the name of the event",
+          "outcome": "an integer that represents the event outcome",
+          "participantCount": "the number of the event's participants",
+          "participants": "a string with the name of the event's participants separated with a pipe symbol ('|')",
+          "winner": "the index of the winner"
+        }
+      },
+      "getPendingEvents()": {
+        "returns": {
+          "_0": "an array of unique pending events ids"
+        }
+      },
+      "owner()": {
+        "details": "Returns the address of the current owner."
+      },
+      "renounceOwnership()": {
+        "details": "Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner."
+      },
+      "testConnection()": {
+        "returns": {
+          "_0": "true, unconditionally"
+        }
+      },
+      "transferOwnership(address)": {
+        "details": "Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner."
+      }
+    },
+    "stateVariables": {
+      "events": {
+        "details": "all the sport events"
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "addSportEvent(string,string,uint8,uint256,uint8)": {
+        "notice": "Add a new pending sport event into the blockchain"
+      },
+      "declareOutcome(bytes32,uint8,int8)": {
+        "notice": "Sets the outcome of a predefined match, permanently on the blockchain"
+      },
+      "eventExists(bytes32)": {
+        "notice": "Determines whether a sport event exists with the given id"
+      },
+      "getAddress()": {
+        "notice": "gets the address of this contract"
+      },
+      "getAllSportEvents()": {
+        "notice": "gets the unique ids of events, pending and decided, in reverse chronological order"
+      },
+      "getEvent(bytes32)": {
+        "notice": "gets the specified sport event and return its data"
+      },
+      "getPendingEvents()": {
+        "notice": "gets the unique ids of all pending events, in reverse chronological order"
+      },
+      "testConnection()": {
+        "notice": "can be used by a client contract to ensure that they've connected to this contract interface successfully"
+      }
+    },
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 7,
+        "contract": "contracts/BetOracle.sol:BetOracle",
+        "label": "_owner",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_address"
+      },
+      {
+        "astId": 114,
+        "contract": "contracts/BetOracle.sol:BetOracle",
+        "label": "_status",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_uint256"
+      },
+      {
+        "astId": 1269,
+        "contract": "contracts/BetOracle.sol:BetOracle",
+        "label": "events",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_array(t_struct(SportEvent)1292_storage)dyn_storage"
+      },
+      {
+        "astId": 1273,
+        "contract": "contracts/BetOracle.sol:BetOracle",
+        "label": "eventIdToIndex",
+        "offset": 0,
+        "slot": "3",
+        "type": "t_mapping(t_bytes32,t_uint256)"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_array(t_struct(SportEvent)1292_storage)dyn_storage": {
+        "base": "t_struct(SportEvent)1292_storage",
+        "encoding": "dynamic_array",
+        "label": "struct BetOracle.SportEvent[]",
+        "numberOfBytes": "32"
+      },
+      "t_bytes32": {
+        "encoding": "inplace",
+        "label": "bytes32",
+        "numberOfBytes": "32"
+      },
+      "t_enum(EventOutcome)2187": {
+        "encoding": "inplace",
+        "label": "enum OracleInterface.EventOutcome",
+        "numberOfBytes": "1"
+      },
+      "t_enum(SportKind)2191": {
+        "encoding": "inplace",
+        "label": "enum OracleInterface.SportKind",
+        "numberOfBytes": "1"
+      },
+      "t_int8": {
+        "encoding": "inplace",
+        "label": "int8",
+        "numberOfBytes": "1"
+      },
+      "t_mapping(t_bytes32,t_uint256)": {
+        "encoding": "mapping",
+        "key": "t_bytes32",
+        "label": "mapping(bytes32 => uint256)",
+        "numberOfBytes": "32",
+        "value": "t_uint256"
+      },
+      "t_string_storage": {
+        "encoding": "bytes",
+        "label": "string",
+        "numberOfBytes": "32"
+      },
+      "t_struct(SportEvent)1292_storage": {
+        "encoding": "inplace",
+        "label": "struct BetOracle.SportEvent",
+        "members": [
+          {
+            "astId": 1275,
+            "contract": "contracts/BetOracle.sol:BetOracle",
+            "label": "id",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_bytes32"
+          },
+          {
+            "astId": 1277,
+            "contract": "contracts/BetOracle.sol:BetOracle",
+            "label": "name",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_string_storage"
+          },
+          {
+            "astId": 1279,
+            "contract": "contracts/BetOracle.sol:BetOracle",
+            "label": "participants",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_string_storage"
+          },
+          {
+            "astId": 1281,
+            "contract": "contracts/BetOracle.sol:BetOracle",
+            "label": "participantCount",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_uint8"
+          },
+          {
+            "astId": 1283,
+            "contract": "contracts/BetOracle.sol:BetOracle",
+            "label": "date",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 1286,
+            "contract": "contracts/BetOracle.sol:BetOracle",
+            "label": "kind",
+            "offset": 0,
+            "slot": "5",
+            "type": "t_enum(SportKind)2191"
+          },
+          {
+            "astId": 1289,
+            "contract": "contracts/BetOracle.sol:BetOracle",
+            "label": "outcome",
+            "offset": 1,
+            "slot": "5",
+            "type": "t_enum(EventOutcome)2187"
+          },
+          {
+            "astId": 1291,
+            "contract": "contracts/BetOracle.sol:BetOracle",
+            "label": "winner",
+            "offset": 2,
+            "slot": "5",
+            "type": "t_int8"
+          }
+        ],
+        "numberOfBytes": "192"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      },
+      "t_uint8": {
+        "encoding": "inplace",
+        "label": "uint8",
+        "numberOfBytes": "1"
+      }
+    }
+  }
+}

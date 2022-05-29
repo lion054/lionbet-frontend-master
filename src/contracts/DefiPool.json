@@ -1,0 +1,314 @@
+{
+  "address": "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_tokenAddress",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "timeStart",
+          "type": "uint256"
+        }
+      ],
+      "name": "Deposit",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "_sender",
+          "type": "address"
+        }
+      ],
+      "name": "deposit",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "depositStart",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "depositTime",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getContractBalance",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "interests",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "userBalance",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "withdraw",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0xbe559b64ed3b67bf95a99ca2f47e23e9e887a5f69f7942a074ce776fb33d55f7",
+  "receipt": {
+    "to": null,
+    "from": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+    "contractAddress": "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9",
+    "transactionIndex": 0,
+    "gasUsed": "848874",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0xe08f1616c4c9cbf445c35fb4cbfd5525be4c5b05d4ac410f17b3921ab715bc36",
+    "transactionHash": "0xbe559b64ed3b67bf95a99ca2f47e23e9e887a5f69f7942a074ce776fb33d55f7",
+    "logs": [],
+    "blockNumber": 4,
+    "cumulativeGasUsed": "848874",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "0x5FbDB2315678afecb367f032d93F642f64180aa3"
+  ],
+  "solcInputHash": "cc781f420f01e99c34b4728e710065fa",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.4+commit.c7e474f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_tokenAddress\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"timeStart\",\"type\":\"uint256\"}],\"name\":\"Deposit\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"_sender\",\"type\":\"address\"}],\"name\":\"deposit\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"depositStart\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"depositTime\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getContractBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"interests\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"userBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_user\",\"type\":\"address\"}],\"name\":\"withdraw\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"}],\"devdoc\":{\"events\":{\"Deposit(address,uint256,uint256)\":{\"details\":\"Event triggered once an address deposited in the contract\"}},\"kind\":\"dev\",\"methods\":{\"constructor\":{\"params\":{\"_tokenAddress\":\"address of the DAI ERC20 token\"}},\"deposit(uint256,address)\":{\"params\":{\"_amount\":\"the amount (DAI) to be deposited\",\"_sender\":\"the address who owns the tokens\"}},\"getContractBalance()\":{\"returns\":{\"_0\":\"return the contract balance\"}},\"withdraw(address)\":{\"params\":{\"_user\":\"address of the user\"}}},\"stateVariables\":{\"Dai\":{\"details\":\"An instance of ERC20 DAI Token\"},\"depositStart\":{\"details\":\"Start date of each user deposit\"},\"depositTime\":{\"details\":\"Time spent in user deposit\"},\"interests\":{\"details\":\"Interests earn per user\"},\"userBalance\":{\"details\":\"Balance of each user address\"}},\"title\":\"A smart-contract that plays the role of a DeFi protocol where users can deposit and earn interests\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"deposit(uint256,address)\":{\"notice\":\"Moves `_amount` tokens from `_sender` to this contract\"},\"withdraw(address)\":{\"notice\":\"Withdraw all amount deposited by a user\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/DefiPool.sol\":\"DefiPool\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\n\\npragma solidity ^0.8.0;\\n\\n/**\\n * @dev Interface of the ERC20 standard as defined in the EIP.\\n */\\ninterface IERC20 {\\n    /**\\n     * @dev Returns the amount of tokens in existence.\\n     */\\n    function totalSupply() external view returns (uint256);\\n\\n    /**\\n     * @dev Returns the amount of tokens owned by `account`.\\n     */\\n    function balanceOf(address account) external view returns (uint256);\\n\\n    /**\\n     * @dev Moves `amount` tokens from the caller's account to `recipient`.\\n     *\\n     * Returns a boolean value indicating whether the operation succeeded.\\n     *\\n     * Emits a {Transfer} event.\\n     */\\n    function transfer(address recipient, uint256 amount) external returns (bool);\\n\\n    /**\\n     * @dev Returns the remaining number of tokens that `spender` will be\\n     * allowed to spend on behalf of `owner` through {transferFrom}. This is\\n     * zero by default.\\n     *\\n     * This value changes when {approve} or {transferFrom} are called.\\n     */\\n    function allowance(address owner, address spender) external view returns (uint256);\\n\\n    /**\\n     * @dev Sets `amount` as the allowance of `spender` over the caller's tokens.\\n     *\\n     * Returns a boolean value indicating whether the operation succeeded.\\n     *\\n     * IMPORTANT: Beware that changing an allowance with this method brings the risk\\n     * that someone may use both the old and the new allowance by unfortunate\\n     * transaction ordering. One possible solution to mitigate this race\\n     * condition is to first reduce the spender's allowance to 0 and set the\\n     * desired value afterwards:\\n     * https://github.com/ethereum/EIPs/issues/20#issuecomment-263524729\\n     *\\n     * Emits an {Approval} event.\\n     */\\n    function approve(address spender, uint256 amount) external returns (bool);\\n\\n    /**\\n     * @dev Moves `amount` tokens from `sender` to `recipient` using the\\n     * allowance mechanism. `amount` is then deducted from the caller's\\n     * allowance.\\n     *\\n     * Returns a boolean value indicating whether the operation succeeded.\\n     *\\n     * Emits a {Transfer} event.\\n     */\\n    function transferFrom(\\n        address sender,\\n        address recipient,\\n        uint256 amount\\n    ) external returns (bool);\\n\\n    /**\\n     * @dev Emitted when `value` tokens are moved from one account (`from`) to\\n     * another (`to`).\\n     *\\n     * Note that `value` may be zero.\\n     */\\n    event Transfer(address indexed from, address indexed to, uint256 value);\\n\\n    /**\\n     * @dev Emitted when the allowance of a `spender` for an `owner` is set by\\n     * a call to {approve}. `value` is the new allowance.\\n     */\\n    event Approval(address indexed owner, address indexed spender, uint256 value);\\n}\\n\",\"keccak256\":\"0x027b891937d20ccf213fdb9c31531574256de774bda99d3a70ecef6e1913ed2a\",\"license\":\"MIT\"},\"contracts/DefiInterface.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.4;\\n\\ninterface DefiInterface {\\n\\n    function deposit(uint _amount, address _sender)\\n        external payable;\\n\\n    function withdraw(address _user)\\n        external payable;\\n\\n    function getContractBalance()\\n        external view\\n        returns (uint256);\\n\\n}\\n\",\"keccak256\":\"0x6baf7cbc2bfdfb7dc449fc57e9223cff594437260d8e596dbf32c4f8020e89e4\",\"license\":\"MIT\"},\"contracts/DefiPool.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.4;\\n\\nimport \\\"@openzeppelin/contracts/token/ERC20/IERC20.sol\\\";\\n\\nimport \\\"./DefiInterface.sol\\\";\\n\\n/**\\n *  @title A smart-contract that plays the role of a DeFi protocol where users can deposit and earn interests\\n */\\ncontract DefiPool is DefiInterface {\\n\\n    /**\\n     * @dev An instance of ERC20 DAI Token\\n     */\\n    IERC20 private Dai;\\n\\n    /**\\n     * @dev Balance of each user address\\n     */\\n    mapping(address => uint256) public userBalance;\\n\\n    /**\\n     * @dev Start date of each user deposit\\n     */\\n    mapping(address => uint256) public depositStart;\\n\\n    /**\\n     * @dev Time spent in user deposit\\n     */\\n    mapping(address => uint256) public depositTime; // temporary\\n\\n    /**\\n     * @dev Interests earn per user\\n     */\\n    mapping(address => uint256) public interests; // temporary\\n\\n    /**\\n     * @dev Event triggered once an address deposited in the contract\\n     */\\n    event Deposit(\\n        address indexed user,\\n        uint256         amount,\\n        uint256         timeStart\\n    );\\n\\n    /**\\n     * @param _tokenAddress address of the DAI ERC20 token\\n     */\\n    constructor(address _tokenAddress) {\\n        Dai = IERC20(_tokenAddress);\\n    }\\n\\n    /**\\n     * @notice Moves `_amount` tokens from `_sender` to this contract\\n     * @param _sender the address who owns the tokens\\n     * @param _amount the amount (DAI) to be deposited\\n     */\\n    function deposit(uint _amount, address _sender)\\n        public override payable\\n    {\\n        require(_amount >= 10, \\\"Error, deposit must be >= 10 DAI\\\");\\n\\n        Dai.transferFrom(_sender, address(this), _amount);\\n\\n        userBalance[_sender] = userBalance[_sender] + _amount;\\n\\n        depositStart[msg.sender] = depositStart[msg.sender] + block.timestamp;\\n\\n        emit Deposit(msg.sender, msg.value, block.timestamp);\\n    }\\n\\n    /**\\n     * @notice Withdraw all amount deposited by a user\\n     * @param _user address of the user\\n     */\\n    function withdraw(address _user)\\n        public override payable\\n    {\\n        // 31577600 = seconds in 365.25 days\\n\\n        // time spent for user's deposit\\n        uint time;\\n        depositTime[_user] = block.timestamp - depositStart[_user];\\n        time = depositTime[_user];\\n\\n        //interests gains per second\\n        uint256 interestPerSecond = 31577600 * uint256(userBalance[_user] / 1e8);\\n\\n        interests[_user] = interestPerSecond * time;\\n        uint initialUserBalance = userBalance[_user];\\n        userBalance[_user] = userBalance[_user] + interests[msg.sender];\\n        Dai.transfer(_user, userBalance[_user]);\\n        userBalance[_user] = userBalance[_user] - initialUserBalance;\\n    }\\n\\n    /**\\n     * @return return the contract balance\\n     */\\n    function getContractBalance()\\n        public view override\\n        returns (uint256)\\n    {\\n        return Dai.balanceOf(address(this));\\n    }\\n}\\n\",\"keccak256\":\"0x241433eaa277f670ce4042728acafd55d83b5aee73ab0327badb6aee35d317b0\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50604051610eff380380610eff8339818101604052810190610032919061008d565b806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550506100ff565b600081519050610087816100e8565b92915050565b60006020828403121561009f57600080fd5b60006100ad84828501610078565b91505092915050565b60006100c1826100c8565b9050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6100f1816100b6565b81146100fc57600080fd5b50565b610df18061010e6000396000f3fe6080604052600436106100705760003560e01c806351cff8d91161004e57806351cff8d91461012c5780636e553f65146101485780636f9fb98a14610164578063ff87930a1461018f57610070565b80630103c92b146100755780630ef44046146100b257806346c64873146100ef575b600080fd5b34801561008157600080fd5b5061009c600480360381019061009791906109aa565b6101cc565b6040516100a99190610b3d565b60405180910390f35b3480156100be57600080fd5b506100d960048036038101906100d491906109aa565b6101e4565b6040516100e69190610b3d565b60405180910390f35b3480156100fb57600080fd5b50610116600480360381019061011191906109aa565b6101fc565b6040516101239190610b3d565b60405180910390f35b610146600480360381019061014191906109aa565b610214565b005b610162600480360381019061015d9190610a25565b610629565b005b34801561017057600080fd5b5061017961088d565b6040516101869190610b3d565b60405180910390f35b34801561019b57600080fd5b506101b660048036038101906101b191906109aa565b61093e565b6040516101c39190610b3d565b60405180910390f35b60016020528060005260406000206000915090505481565b60046020528060005260406000206000915090505481565b60036020528060005260406000206000915090505481565b6000600260008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054426102619190610c73565b600360008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002081905550600360008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054905060006305f5e100600160008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020546103379190610be8565b6301e1d6006103469190610c19565b905081816103549190610c19565b600460008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020819055506000600160008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020549050600460003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054600160008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020546104659190610b92565b600160008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000208190555060008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663a9059cbb85600160008873ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020546040518363ffffffff1660e01b8152600401610542929190610af4565b602060405180830381600087803b15801561055c57600080fd5b505af1158015610570573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061059491906109d3565b5080600160008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020546105e09190610c73565b600160008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000208190555050505050565b600a82101561066d576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161066490610b1d565b60405180910390fd5b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166323b872dd8230856040518463ffffffff1660e01b81526004016106ca93929190610abd565b602060405180830381600087803b1580156106e457600080fd5b505af11580156106f8573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061071c91906109d3565b5081600160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020546107689190610b92565b600160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000208190555042600260003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020546107f69190610b92565b600260003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020819055503373ffffffffffffffffffffffffffffffffffffffff167f90890809c654f11d6e72a28fa60149770a0d11ec6c92319d6ceb2bb0a4ea1a153442604051610881929190610b58565b60405180910390a25050565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166370a08231306040518263ffffffff1660e01b81526004016108e99190610aa2565b60206040518083038186803b15801561090157600080fd5b505afa158015610915573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061093991906109fc565b905090565b60026020528060005260406000206000915090505481565b60008135905061096581610d76565b92915050565b60008151905061097a81610d8d565b92915050565b60008135905061098f81610da4565b92915050565b6000815190506109a481610da4565b92915050565b6000602082840312156109bc57600080fd5b60006109ca84828501610956565b91505092915050565b6000602082840312156109e557600080fd5b60006109f38482850161096b565b91505092915050565b600060208284031215610a0e57600080fd5b6000610a1c84828501610995565b91505092915050565b60008060408385031215610a3857600080fd5b6000610a4685828601610980565b9250506020610a5785828601610956565b9150509250929050565b610a6a81610ca7565b82525050565b6000610a7d602083610b81565b9150610a8882610d4d565b602082019050919050565b610a9c81610ce5565b82525050565b6000602082019050610ab76000830184610a61565b92915050565b6000606082019050610ad26000830186610a61565b610adf6020830185610a61565b610aec6040830184610a93565b949350505050565b6000604082019050610b096000830185610a61565b610b166020830184610a93565b9392505050565b60006020820190508181036000830152610b3681610a70565b9050919050565b6000602082019050610b526000830184610a93565b92915050565b6000604082019050610b6d6000830185610a93565b610b7a6020830184610a93565b9392505050565b600082825260208201905092915050565b6000610b9d82610ce5565b9150610ba883610ce5565b9250827fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff03821115610bdd57610bdc610cef565b5b828201905092915050565b6000610bf382610ce5565b9150610bfe83610ce5565b925082610c0e57610c0d610d1e565b5b828204905092915050565b6000610c2482610ce5565b9150610c2f83610ce5565b9250817fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0483118215151615610c6857610c67610cef565b5b828202905092915050565b6000610c7e82610ce5565b9150610c8983610ce5565b925082821015610c9c57610c9b610cef565b5b828203905092915050565b6000610cb282610cc5565b9050919050565b60008115159050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601260045260246000fd5b7f4572726f722c206465706f736974206d757374206265203e3d20313020444149600082015250565b610d7f81610ca7565b8114610d8a57600080fd5b50565b610d9681610cb9565b8114610da157600080fd5b50565b610dad81610ce5565b8114610db857600080fd5b5056fea2646970667358221220562cfd363e7d3b9146cdd3169e56d4106838894f19b7d23e6eebb0d3f8edbd2464736f6c63430008040033",
+  "deployedBytecode": "0x6080604052600436106100705760003560e01c806351cff8d91161004e57806351cff8d91461012c5780636e553f65146101485780636f9fb98a14610164578063ff87930a1461018f57610070565b80630103c92b146100755780630ef44046146100b257806346c64873146100ef575b600080fd5b34801561008157600080fd5b5061009c600480360381019061009791906109aa565b6101cc565b6040516100a99190610b3d565b60405180910390f35b3480156100be57600080fd5b506100d960048036038101906100d491906109aa565b6101e4565b6040516100e69190610b3d565b60405180910390f35b3480156100fb57600080fd5b50610116600480360381019061011191906109aa565b6101fc565b6040516101239190610b3d565b60405180910390f35b610146600480360381019061014191906109aa565b610214565b005b610162600480360381019061015d9190610a25565b610629565b005b34801561017057600080fd5b5061017961088d565b6040516101869190610b3d565b60405180910390f35b34801561019b57600080fd5b506101b660048036038101906101b191906109aa565b61093e565b6040516101c39190610b3d565b60405180910390f35b60016020528060005260406000206000915090505481565b60046020528060005260406000206000915090505481565b60036020528060005260406000206000915090505481565b6000600260008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054426102619190610c73565b600360008473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002081905550600360008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054905060006305f5e100600160008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020546103379190610be8565b6301e1d6006103469190610c19565b905081816103549190610c19565b600460008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020819055506000600160008573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020549050600460003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054600160008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020546104659190610b92565b600160008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000208190555060008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663a9059cbb85600160008873ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020546040518363ffffffff1660e01b8152600401610542929190610af4565b602060405180830381600087803b15801561055c57600080fd5b505af1158015610570573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061059491906109d3565b5080600160008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020546105e09190610c73565b600160008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000208190555050505050565b600a82101561066d576040517f08c379a000000000000000000000000000000000000000000000000000000000815260040161066490610b1d565b60405180910390fd5b60008054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166323b872dd8230856040518463ffffffff1660e01b81526004016106ca93929190610abd565b602060405180830381600087803b1580156106e457600080fd5b505af11580156106f8573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061071c91906109d3565b5081600160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020546107689190610b92565b600160008373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000208190555042600260003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020546107f69190610b92565b600260003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020819055503373ffffffffffffffffffffffffffffffffffffffff167f90890809c654f11d6e72a28fa60149770a0d11ec6c92319d6ceb2bb0a4ea1a153442604051610881929190610b58565b60405180910390a25050565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166370a08231306040518263ffffffff1660e01b81526004016108e99190610aa2565b60206040518083038186803b15801561090157600080fd5b505afa158015610915573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061093991906109fc565b905090565b60026020528060005260406000206000915090505481565b60008135905061096581610d76565b92915050565b60008151905061097a81610d8d565b92915050565b60008135905061098f81610da4565b92915050565b6000815190506109a481610da4565b92915050565b6000602082840312156109bc57600080fd5b60006109ca84828501610956565b91505092915050565b6000602082840312156109e557600080fd5b60006109f38482850161096b565b91505092915050565b600060208284031215610a0e57600080fd5b6000610a1c84828501610995565b91505092915050565b60008060408385031215610a3857600080fd5b6000610a4685828601610980565b9250506020610a5785828601610956565b9150509250929050565b610a6a81610ca7565b82525050565b6000610a7d602083610b81565b9150610a8882610d4d565b602082019050919050565b610a9c81610ce5565b82525050565b6000602082019050610ab76000830184610a61565b92915050565b6000606082019050610ad26000830186610a61565b610adf6020830185610a61565b610aec6040830184610a93565b949350505050565b6000604082019050610b096000830185610a61565b610b166020830184610a93565b9392505050565b60006020820190508181036000830152610b3681610a70565b9050919050565b6000602082019050610b526000830184610a93565b92915050565b6000604082019050610b6d6000830185610a93565b610b7a6020830184610a93565b9392505050565b600082825260208201905092915050565b6000610b9d82610ce5565b9150610ba883610ce5565b9250827fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff03821115610bdd57610bdc610cef565b5b828201905092915050565b6000610bf382610ce5565b9150610bfe83610ce5565b925082610c0e57610c0d610d1e565b5b828204905092915050565b6000610c2482610ce5565b9150610c2f83610ce5565b9250817fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0483118215151615610c6857610c67610cef565b5b828202905092915050565b6000610c7e82610ce5565b9150610c8983610ce5565b925082821015610c9c57610c9b610cef565b5b828203905092915050565b6000610cb282610cc5565b9050919050565b60008115159050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601260045260246000fd5b7f4572726f722c206465706f736974206d757374206265203e3d20313020444149600082015250565b610d7f81610ca7565b8114610d8a57600080fd5b50565b610d9681610cb9565b8114610da157600080fd5b50565b610dad81610ce5565b8114610db857600080fd5b5056fea2646970667358221220562cfd363e7d3b9146cdd3169e56d4106838894f19b7d23e6eebb0d3f8edbd2464736f6c63430008040033",
+  "devdoc": {
+    "events": {
+      "Deposit(address,uint256,uint256)": {
+        "details": "Event triggered once an address deposited in the contract"
+      }
+    },
+    "kind": "dev",
+    "methods": {
+      "constructor": {
+        "params": {
+          "_tokenAddress": "address of the DAI ERC20 token"
+        }
+      },
+      "deposit(uint256,address)": {
+        "params": {
+          "_amount": "the amount (DAI) to be deposited",
+          "_sender": "the address who owns the tokens"
+        }
+      },
+      "getContractBalance()": {
+        "returns": {
+          "_0": "return the contract balance"
+        }
+      },
+      "withdraw(address)": {
+        "params": {
+          "_user": "address of the user"
+        }
+      }
+    },
+    "stateVariables": {
+      "Dai": {
+        "details": "An instance of ERC20 DAI Token"
+      },
+      "depositStart": {
+        "details": "Start date of each user deposit"
+      },
+      "depositTime": {
+        "details": "Time spent in user deposit"
+      },
+      "interests": {
+        "details": "Interests earn per user"
+      },
+      "userBalance": {
+        "details": "Balance of each user address"
+      }
+    },
+    "title": "A smart-contract that plays the role of a DeFi protocol where users can deposit and earn interests",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "deposit(uint256,address)": {
+        "notice": "Moves `_amount` tokens from `_sender` to this contract"
+      },
+      "withdraw(address)": {
+        "notice": "Withdraw all amount deposited by a user"
+      }
+    },
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 1936,
+        "contract": "contracts/DefiPool.sol:DefiPool",
+        "label": "Dai",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_contract(IERC20)767"
+      },
+      {
+        "astId": 1941,
+        "contract": "contracts/DefiPool.sol:DefiPool",
+        "label": "userBalance",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_mapping(t_address,t_uint256)"
+      },
+      {
+        "astId": 1946,
+        "contract": "contracts/DefiPool.sol:DefiPool",
+        "label": "depositStart",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_mapping(t_address,t_uint256)"
+      },
+      {
+        "astId": 1951,
+        "contract": "contracts/DefiPool.sol:DefiPool",
+        "label": "depositTime",
+        "offset": 0,
+        "slot": "3",
+        "type": "t_mapping(t_address,t_uint256)"
+      },
+      {
+        "astId": 1956,
+        "contract": "contracts/DefiPool.sol:DefiPool",
+        "label": "interests",
+        "offset": 0,
+        "slot": "4",
+        "type": "t_mapping(t_address,t_uint256)"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_contract(IERC20)767": {
+        "encoding": "inplace",
+        "label": "contract IERC20",
+        "numberOfBytes": "20"
+      },
+      "t_mapping(t_address,t_uint256)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => uint256)",
+        "numberOfBytes": "32",
+        "value": "t_uint256"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}
